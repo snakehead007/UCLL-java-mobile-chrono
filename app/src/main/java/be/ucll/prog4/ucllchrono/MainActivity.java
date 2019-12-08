@@ -1,7 +1,6 @@
 package be.ucll.prog4.ucllchrono;
 
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void handleClickBtnStart(View view) {
-        worker = new Worker(SystemClock.elapsedRealtime());
+        worker = new Worker();
         worker.execute(lblTime);
 
         btnStop.setEnabled(true);

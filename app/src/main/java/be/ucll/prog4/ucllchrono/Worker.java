@@ -7,19 +7,13 @@ import android.widget.TextView;
 
 public class Worker extends AsyncTask<TextView, String, Boolean> {
     private String TAG;
-    private final long startTime;
     private TextView lblTime;
-
-    public Worker(long startTime) {
-        super();
-        this.startTime = startTime;
-    }
 
     @Override
     protected Boolean doInBackground(TextView... textViews) {
         TAG = getClass().getSimpleName();
         lblTime = textViews[0];
-
+        long startTime = SystemClock.elapsedRealtime();
         Log.d(TAG, "Chrono started on " + formatDuration(startTime));
 
         // Create eternal loop
