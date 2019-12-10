@@ -41,6 +41,7 @@ public class Worker extends AsyncTask<TextView, String, Boolean> {
 
         // Less then a minute
         if (duration < (60 * 1000)) {
+            // seconds = TimeUnit.MILLISECONDS.toSeconds(duration);
             seconds = duration / 1000;
             return String.format("00:%02d", seconds);
 

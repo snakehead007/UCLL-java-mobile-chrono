@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         lblTime = this.findViewById(R.id.lblTime);
         btnStart = this.findViewById(R.id.btnStart);
         btnStop = this.findViewById(R.id.btnStop);
+
+        btnStop.setEnabled(false);
     }
 
     public void handleClickBtnStart(View view) {
