@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/ucllBlue"
-    tools:context=".MainActivity">
+    android:background="@color/ucllDarkBlue"
+    tools:context=".activities.MainActivity">
 
     <TextView
         android:id="@+id/lblTime"
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:background="@drawable/btn_rounded"
+        android:background="@drawable/btn_rounded_enabled"
         android:enabled="true"
         android:onClick="handleClickBtnStart"
         android:text="Start"
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:background="@drawable/btn_rounded"
+        android:background="@drawable/btn_rounded_disabled"
         android:enabled="false"
         android:onClick="handleClickBtnStop"
         android:text="Stop"
