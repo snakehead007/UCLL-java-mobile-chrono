@@ -47,8 +47,11 @@ public class MainActivity extends AppCompatActivity {
 
         btnStop.setEnabled(true);
         btnStop.setBackground(getDrawable(R.drawable.btn_rounded_enabled));
+        //btnStop.setAlpha(1); Goede suggestie Thomas Claes
+
         btnStart.setEnabled(false);
         btnStart.setBackground(getDrawable(R.drawable.btn_rounded_disabled));
+        // btnStart.setAlpha((float) 0.5); Goede suggestie Thomas Claes
     }
 
     public void handleClickBtnStop(View view) {
