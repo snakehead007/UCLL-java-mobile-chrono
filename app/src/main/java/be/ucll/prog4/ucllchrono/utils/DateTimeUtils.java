@@ -5,14 +5,8 @@ public class DateTimeUtils {
     public static String formatDuration(long duration) {
         long seconds, minutes, hours;
 
-        // Less then a minute
-        if (duration < (60 * 1000)) {
-            // seconds = TimeUnit.MILLISECONDS.toSeconds(duration);
-            seconds = duration / 1000;
-            return String.format("00:%02d", seconds);
-
-            // less then an hour
-        } else if (duration < (60 * 60 * 1000)) {
+        // Less then an hour
+        if (duration < (60 * 60 * 1000)) {
             minutes = duration / 1000 / 60;
             seconds = duration / 1000 % 60;
             return String.format("%02d:%02d", minutes, seconds);

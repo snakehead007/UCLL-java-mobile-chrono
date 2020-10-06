@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     private Button btnStop;
 
     private long startTime;
-
     private boolean running;
 
     @Override
@@ -80,9 +79,12 @@ public class MainActivity extends AppCompatActivity {
                             }
                         });
 
-                        Thread.sleep(100); // update duration every 100 milliseconds.
+                        // No need to go faster then screen refresh rate
+                        // f.i. 60 Hz screen refresh is once every 167 Milliseconds
+                        // If we update twice in that range it is more then enough
+                        Thread.sleep(80); // update duration every 80 milliseconds.
                     } catch (InterruptedException e) {
-                        Log.e(TAG, e.getMessage());
+                        // Thread woke up unexpected. No problem, just continue
                     }
                 }
             }
